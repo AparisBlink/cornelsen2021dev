@@ -46,6 +46,9 @@ body:not(.isTablet) #indice .units ul li:not(.disabled) a .title:hover {
 	font-size: 14px;
 	font-weight: 400;
 }
+#swipeview-slider > div {
+	background-color: #eee;
+}
 
 /*Input Blanco*/
 .input_blanco .slide_main .html-book input {
@@ -55,7 +58,17 @@ body:not(.isTablet) #indice .units ul li:not(.disabled) a .title:hover {
 	border: 1px solid #ccc;
 	background: #fff;
 }
-
+#actividad .carousel-inner .item-container {
+    background-image: none;
+    max-width: 1200px;
+    -webkit-box-shadow:  #00000029 6px 3px 8px;
+    -moz-box-shadow:  #00000029 6px 3px 8px;
+    box-shadow: #00000029 6px 3px 8px;
+    margin: 20px auto 30px;
+    padding: 0px;
+    padding-bottom: 90px;
+    position: relative;
+}
 /*logo*/
 
 .content_type_curso_cornelsen2021dev   .libro-left ul li .title:before {
