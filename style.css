@@ -719,18 +719,27 @@ body:not(.edit) .back .bck-flipbox-title,
 /*CAJA POP-UP*/
 .info-popover .popover-title:before,
 .popover-template .popover-title:before {
-	color: #728fa6;
+	display:none;
 }
 
 .info-popover .popover-title,
 .popover-template .popover-title {
-	background: #728fa6;
+    position: relative;
+    background: none;
+    padding-left: 0;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    color: #1A73E9;
+    border-bottom: 0;
+    font-weight: bold;
 }
-
+.close-popover {
+    color: #1a73e9;
+}
 .info-template .info-title {
 	color: #333;
 }
-
 .info-template .info-title.shown {
 	margin: 0 3px 12px 0;
 }
@@ -739,33 +748,36 @@ body:not(.edit) .back .bck-flipbox-title,
 	display: none;
 }
 
+
 /*icono info*/
 .fa-info:before {
-	content: "+";
-	font-weight: bold;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 2.2rem;
-	line-height: 20px;
-	color: #333;
+    content: "i";
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 5px;
+    color: #1A73E9;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 1px 6px;
 }
 
 #actividad .info-button {
-	display: block;
-	width: 24px;
-	height: 24px;
-	margin: 0px;
-	-webkit-box-shadow: 0 0 2px #555;
-	-moz-box-shadow: 0 0 2px #555;
-	box-shadow: 0 0 2px #555;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	background: #fff;
-	color: #1a171b;
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	line-height: 24px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    -webkit-box-shadow:  0 0 6px #5555553d;
+    -moz-box-shadow: 0 0 6px #5555553d;
+    box-shadow: 0 0 6px #5555553d;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    color: #1a171b;
+    line-height: 38px;
 	text-align: center;
+	cursor: pointer;
 }
 
 /*Pop-up flotante*/
@@ -793,6 +805,21 @@ body:not(.edit) .back .bck-flipbox-title,
 	-o-transition: all ease-in-out .5s;
 	-moz-transition: all ease-in-out .5s;
 	transition: all ease-in-out .5s;
+}
+.info-template.shown {
+	background: #fff;
+	-webkit-box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+	-moz-box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+	box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+
+}
+.info-template .info-title.shown {
+    margin: 0 3px 12px 0;
+    margin: 5px 10px;
+    padding: 0px;
+    color: #1A73E9;
+    font-weight: bold;
+    font-size: 14px;
 }
 /*Dropdown 1*/
 .bck-dropdown.bck-dropdown-1 {
