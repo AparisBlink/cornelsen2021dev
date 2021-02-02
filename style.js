@@ -1,527 +1,921 @@
+/* Fonts */
 
-(function (blink) {
-	'use strict';
-
-	var cornelsen2021devStyle = function () {
-			blink.theme.styles.basic.apply(this, arguments);
-		},
-		page = blink.currentPage;
-
-	cornelsen2021devStyle.prototype = {
-		//BK-15873 añadimos el estilo basic como parent para la herencia de los estilos del CKEditor
-		parent: blink.theme.styles.basic.prototype,
-		bodyClassName: 'content_type_clase_cornelsen2021dev',
-		ckEditorStyles: {
-			name: 'cornelsen2021dev',
-			styles: [
-				{ name: 'Title 1', element: 'h3', attributes: { 'class': 'bck-title bck-title-1'} },
-				{ name: 'Title 2', element: 'h3', attributes: { 'class': 'bck-title bck-title-2'} },
-				{ name: 'Title 3', element: 'h3', attributes: { 'class': 'bck-title bck-title-3'} },
-				{ name: 'Title 4 Context', element: 'h3', attributes: { 'class': 'bck-title bck-title-4'} },
-				{ name: 'Title 5 Fremdtexte', element: 'h3', attributes: { 'class': 'bck-title bck-title-5'} },
-
-				{ name: 'Emphasis Main Color', element: 'span', attributes: { 'class': 'bck-enfasis'} },
+/*font-family: 'Source Serif Pro', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-				{ name: 'Lista Ordenada 1', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-1' } },
-				{ name: 'Lista Ordenada 2', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-2' } },
-				{ name: 'Lista Ordenada 3', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-3' } },
-				{ name: 'Lista Ordenada 4', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-4' } },
+:root {
+	--colorppal: #DE2922;
+	--colortrans: #de292214;
+}
 
-				{ name: 'Lista Desordenada 1', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-1' } },
-				{ name: 'Lista Desordenada 2', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-2' } },
-				{ name: 'Lista Desordenada 3', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-3' } },
+b,
+strong {
+	font-weight: bold;
+}
 
-				{ name: 'Caja 1', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-1' } },
-				{ name: 'Caja 2', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-2' } },
-				{ name: 'Caja 3', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-3' } },
-				{ name: 'Caja 4', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-4' } },
-				{ name: 'Caja 5', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-5' } },
-				{ name: 'Caja 6', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-6' } },
-				{ name: 'Caja 7', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-7' } },
-				{ name: 'Caja 8', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-8' } },
-				{ name: 'Caja 9', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-9' } },
-				{ name: 'Caja 10', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-10' } },
-				{ name: 'Caja 11', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-11' } },
-				{ name: 'Caja 12', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-12' } },
-				{ name: 'Caja 13', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-13' } },
+/*TOC*/
+#indice .units ul li.active:not(.disabled),
+#indice .units ul li:focus:not(.disabled) {
+	background-color: #333 !important;
+}
 
-				{ name: 'Icono Critical Thinking Naranja oscuro', element: 'span', attributes: { 'class': 'icon icon-critical' } },
-				{ name: 'Icono Critical Thinking Naranja claro', element: 'span', attributes: { 'class': 'icon icon-critical-gold' } },
-				{ name: 'Icono Critical Thinking Verde', element: 'span', attributes: { 'class': 'icon icon-critical-verde' } },
-				{ name: 'Icono Critical Thinking Negro', element: 'span', attributes: { 'class': 'icon icon-critical-negro' } },
-				{ name: 'Icono Critical Thinking Azul', element: 'span', attributes: { 'class': 'icon icon-critical-azul' } },
-				{ name: 'Icono Search Naranja oscuro', element: 'span', attributes: { 'class': 'icon icon-search' } },
-				{ name: 'Icono Search Naranja claro', element: 'span', attributes: { 'class': 'icon icon-search-naranjaclaro' } },
-				{ name: 'Icono Search Verde', element: 'span', attributes: { 'class': 'icon icon-search-verde' } },
-				{ name: 'Icono Search Negro', element: 'span', attributes: { 'class': 'icon icon-search-negro' } },
-				{ name: 'Icono Search Azul', element: 'span', attributes: { 'class': 'icon icon-search-azul' } },
-				{ name: 'Icono Video Oscuro', element: 'span', attributes: { 'class': 'icon icon-video-oscuro' } },
-				{ name: 'Icono Bocadillo Blanco', element: 'span', attributes: { 'class': 'icon icon-bocadillo-blanco' } },
+body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
+	font-size: 14px;
+	font-weight: bold;
+}
 
-				{ name: 'Desplegable 1', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-1' } },
-				{ name: 'Desplegable 2', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-2' } },
-				{ name: 'Desplegable 3', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-3' } },
-				{ name: 'Desplegable 4', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-4' } },
-				{ name: 'Desplegable 5', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-5' } }
-			]
-		},
-		slidesTitle: {},
-		subunits: [],
-		totalSlides: 0,
+body:not(.isTablet) #indice .units ul li:hover:not(.disabled),
+#indice .units ul li:hover:not(.disabled) {
+	background: #b7b7b7;
 
-		init: function (scope) {
-			var that = scope || this;
-			this.parent.init.call(that);
-			that.addActivityTitle();
-			if(window.esWeb) return;
-			that.fillSlidesTitle();
-			that.getActualUnitActivities();
-			blink.events.on("course_loaded", function(){
-				that.formatCarouselindicators();
-				that.enableSliders();
-			});
-			that.animateNavbarOnScroll();
-			that.initDropdown();
-			that.addSlideNavigators();
-		},
-		removeFinalSlide: function () {
-			if (blink.isIosApp && blink.activity.level != 6) {
-				var parent = blink.theme.styles.basic.prototype;
-				parent.removeFinalSlide.call(this, true);
-			}
-		},
+}
 
-		addActivityTitle: function () {
-			if (!blink.courseInfo || !blink.courseInfo.unit) return;
-			$('.libro-left').find('.title').html(function () {
-				return blink.courseInfo.unit + ' > ' + $(this).html();
-			})
-		},
+body:not(.isTablet) #indice .units ul li:not(.disabled) a .title:hover {
+	color: #fff;
+}
 
-		fillSlidesTitle: function () {
-			var self = this.slidesTitle;
-			for (var index = 0; index < window.secuencia.length; index++) {
-				var slide = window['t'+index+'_slide'];
-				var slideTitle = slide.title;
-				slideTitle = slideTitle.replace(/<span class="index">\s*([\d]+)\s*<\/span>/i, '$1. ');
-				slideTitle = slideTitle.replace(/\s+/, ' ');
-				slideTitle = stripHTML(slideTitle);
+#list-units .unittag_textbook_cornelsen2021dev {
+	background: #31a2c7 !important;
+}
 
-				self['t'+index+'_slide'] = slideTitle;
-			}
-		},
+#list-units .unittag_textbook_cornelsen2021dev:hover {
+	background: #3333337d !important;
+}
 
-		/**
-		 * @summary Gets the activity type subunits of the actual unit.
-		 * @return {Object} Object of the actual unit filtering the not activity type subunits
-		 */
-		getActualUnitActivities: function () {
-			var curso = blink.getCourse(idcurso),
-				that = this,
-				units,
-				unitSubunits,
-				actualActivity,
-				tmpActualActivity = '',
-				tmpActivity = '',
-				nextActivity = '',
-				previousActivity = '',
-				unitActivities = [];
+.units ul#list-units .unittag_textbook_cornelsen2021dev a .title {
+	color: #ffffff;
+}
 
-			curso.done(function () {
-				units = curso.responseJSON.units;
 
-				$.each(units, function () {
-					if (this.id && this.id == blink.courseInfo.IDUnit) {
-						unitSubunits = this.subunits.concat(this.resources);
-					}
+/*General */
+#book-index #indice .units ul li a .title {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+#swipeview-slider > div {
+	background-color: #eee;
+}
+#actividad .class_slide {
+    padding: 40px 40px 0px;
+}
 
-					$.each(this.subunits, function () {
-						if(nextActivity === '' && tmpActualActivity !== '' && this.level != 6) {
-							nextActivity = this;
-						}
-						if (idclase == this.id) {
-							tmpActualActivity = this.title;
-							if(tmpActivity && tmpActivity.level != 6) {
-								previousActivity = tmpActivity;
-							}
-						}
-						tmpActivity = this;
-					});
-				});
+/*Input Blanco*/
+.input_blanco .slide_main .html-book input {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+#actividad .carousel-inner .item-container {
+    background-image: none;
+    max-width: 1200px;
+    -webkit-box-shadow:  #00000029 6px 3px 8px;
+    -moz-box-shadow:  #00000029 6px 3px 8px;
+    box-shadow: #00000029 6px 3px 8px;
+    margin: 20px auto 30px;
+    padding: 0px;
+    padding-bottom: 90px;
+    position: relative;
+}
+/*logo*/
 
-				actualActivity = _.find(unitSubunits, function(subunit) {
-					return subunit.id == idclase;
-				});
+.content_type_curso_cornelsen2021dev   .libro-left ul li .title:before {
+	content: "";
+	background-size: contain;
+	top: 3px;
+	background-image: url(imagenes_difusion/thespanishhub_logo.png) !important;
+	position: fixed;
+	width: 80px;
+	height: 40px;
+	background-repeat: no-repeat;
+	left: 50%;
+	margin-left: -40px;
+	opacity: 1;
+}
 
-				if (typeof actualActivity !== "undefined" && actualActivity.level == '6') {
-					unitActivities.push(actualActivity);
-				} else {
-					unitActivities = _.filter(unitSubunits, function(subunit) {
-						return subunit.type == 'actividad' && subunit.level !== '6';
-					});
-				}
+.content_type_curso_cornelsen2021dev.content_type_clase_cornelsen2021dev   .libro-left ul li .title:before { 
+	opacity: 0;
+}
+.navbar-content .logo-publisher {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 44px;
+	background: url(imagenes_difusion/thespanishhub_logo.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	   -moz-background-size: contain;
+		 -o-background-size: contain;
+			background-size: contain;
+	background-position: center center;
 
-				that.subunits = unitActivities;
+}
 
-				if(nextActivity !== '' || previousActivity !== '') {
-					that.createListenerForSwipeBetweenActivities(nextActivity, previousActivity);
-				}
-			}).done(function(){
-				blink.events.trigger('course_loaded');
-			});
-		},
+/*video*/
+.vjs-poster {
+	background-color: #fff;
+}
 
-		createListenerForSwipeBetweenActivities: function(nextActivity, previousActivity) {
-			var that = this;
+body {
+	font-size: 2.0rem;
+	font-weight: normal;
+	text-align: left;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.texto_curso p {
+	line-height: 3.0rem !important;
+	margin: 1.5rem 0;
+}
+#actividad .texto_curso {
+    font-size: 2.0rem;
+}
 
-			if(nextActivity !== '' && typeof nextActivity.url !== 'undefined') {
-				document.addEventListener('swipe:last:nextActivity', function(e) {
-					redireccionar(nextActivity.url);
-				}, false);
-			}
+.slide-wrapper {
+	text-align: left;
+}
 
-			if(previousActivity !== '' && typeof previousActivity.url !== 'undefined') {
-				document.addEventListener('swipe:first:previousActivity', function(e) {
-					redireccionar(previousActivity.url);
-				}, false);
-			}
-		},
+/*tamaño enunciado listas*/
 
-		/**
-		 * @summary Getting active slide position in relation with the total of the
-		 *          unit slides.
-		 * @param {Array} $subunits Array of activity type objects
-		 * @return {int} Slide position
-		 */
-		getActualSlideNumber: function (subunits) {
-			var actualSlideIndex = $('.swipeview-active').attr('data-page-index'),
-				actualSlide = 1;
+#actividad .pregunta .texto_curso {
+	font-size: 1.8rem;
+}
 
-			for (var i in subunits) {
-				if (subunits[i].id && parseInt(subunits[i].id) != idclase) {
-					actualSlide += parseInt(subunits[i].pags);
-				} else {
-					actualSlide += parseInt(actualSlideIndex);
-					break;
-				}
-			}
+#actividad textarea {
+    font-size: 18px;
+}
 
-			return actualSlide;
-		},
+/*ENLACE WEB*/
 
-		formatCarouselindicators: function (scope, classNavbar) {
-			var that = scope || this,
-				navbar = ((typeof classNavbar !== "undefined" && classNavbar)?classNavbar:'cornelsen2021dev-navbar'),
-				$navbarBottom = $('.navbar-bottom'),
-				firstSlide = eval('t0_slide');
-			if(blink.courseInfo && blink.courseInfo.courseDateCreated) var courseYearCreated = new Date(blink.courseInfo.courseDateCreated).getFullYear();
-			var yearCopy = courseYearCreated !== undefined ? courseYearCreated : 2016;
-			$navbarBottom
-				.attr('class', navbar)
-				.wrapInner('<div class="navbar-content"></div>')
-				.find('ol')
-					.before('<span class="copyright">&copy;' +  yearCopy + '</span>')
-					.wrap('<div id="top-navigator"/>')
-					.remove()
-					.end();
+#actividad a,
+body:not(.edit) #actividad a:not(.cke_button):not(.zoom_flag_img) {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: transparent;
+	padding: 0px 5px;
+	color: #333;
+	font-weight: 600;
+	text-decoration: none;
+}
+/*INDICE LATERAL*/
 
-			$('#volverAlIndice').click(function() {
-				return showCursoCommit();
-			});
+#indice .units ul li:not(.add) a .title {
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 10px;
+}
 
-			var subunits = that.subunits,
-				totalSlides = 0,
-				subunit_index,
-				subunit_pags;
 
-			// Different behaviour depending on whether the slides are accessed from
-			// a book or from a homework link or similar
-			if (subunits.length !== 0) {
-				for (var i in subunits) {
-					if (subunits[i].pags) {
-						var subunitSlides = parseInt(subunits[i].pags);
-						totalSlides += subunitSlides;
-					}
-					if (subunits[i].id && subunits[i].id == idclase) {
-						subunit_index = i;
-						subunit_pags = parseInt(subunits[i].pags);
-					}
-				}
+body:not(.isTablet) #book-index #indice .units ul li:not(.disabled) a:hover,
+#book-index #indice .units ul li.active a {
+	background: #b7b7b7;
+}
 
-				that.totalSlides = totalSlides;
 
-				$('#top-navigator').append('<span class="left slider-navigator">' +
-						'<span class="fa fa-chevron-left"></span>' +
-					'</span>' +
-					'<span class="slide-counter" data-subunit-index="' + subunit_index +
-						'" data-subunit-pags="' + subunit_pags + '">' +
-						that.getActualSlideNumber(subunits) + ' / ' + totalSlides +
-					'</span>' +
-					'<span class="right slider-navigator">' +
-						'<span class="fa fa-chevron-right"></span>' +
-					'</span>');
+#book-index .col-main {
+	background: #31A2C7;
+}
 
-				blink.events.on('section:shown', function() {
-					$('.slide-counter').html(that.getActualSlideNumber(subunits) +
-						' / ' + totalSlides);
-				});
-			} else {
-				$('#top-navigator').append('<span class="left slider-navigator">' +
-						'<span class="fa fa-chevron-left"></span>' +
-					'</span>' +
-					'<span class="slide-counter">' + (window.activeSlide + 1) +
-						' / ' + window.secuencia.length +
-					'</span>' +
-					'<span class="right slider-navigator">' +
-						'<span class="fa fa-chevron-right"></span>' +
-					'</span>');
 
-				blink.events.on('section:shown', function() {
-					$('.slide-counter').html((window.activeSlide + 1) +
-						' / ' + window.secuencia.length);
-					$('.bck-dropdown-2').hideBlink();
-				});
-			}
+#indice .unit-content .header .title {
+	color: #fff;
+	background: transparent;
+	float: left;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 34px;
+	padding: 5px 20px;
+	height: 88px;
+	margin: 5px 140px 20px 8px;
+	overflow: hidden;
+	z-index: 1;
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
 
-			blink.events.on('section:shown', function() {
-				var sectionTitle = eval('t' + blink.activity.getFirstSlideIndex(window.activeSlide) +
-					'_slide').title;
-				$navbarBottom.find('.sectionTitle').text(sectionTitle);
-			});
 
-			if (firstSlide.seccion) {
-				$navbarBottom.addClass('first-is-section');
-			}
+#book-index #indice .unit-content .actividades .item .title {
+	font-size: 14px;
+}
 
-			blink.events.trigger(true, 'style:endFormatCarousel');
-		},
+#indice .unit-content .actividades .item .nota {
+	background-color: #428bca;
+}
 
-		addSlideNavigators: function () {
-			var that = this;
 
-			blink.events.on("course_loaded", function(){
-				var that = blink.activity.currentStyle,
-					subunit_index = parseInt($('.slide-counter').attr('data-subunit-index')),
-					level_six = that.subunits.length == 1 && that.subunits[0].level == 6;
+#indice .units ul li.active:not(.disabled),
+#indice .units ul li:focus:not(.disabled) {
+	background: #31A2C7;
+}
 
-				$('.slider-control').off('click');
-				// Navigation change depending on whether the slides are accessed from
-				// a book or from a homework link or similar
-				if (that.subunits.length !== 0 && !level_six) {
-					// Slider controls must allow navigation among all the activity subunits
-					// in the current unit.
-					var idgrupo = window.idgrupo,
-						idalumno = window.idalumno,
-						slideNavParams = '';
 
-					if (idgrupo) slideNavParams += '&idgrupo=' + idgrupo;
-					if (idalumno) slideNavParams += '&idalumno=' + idalumno;
+body:not(.isTablet) #indice .units ul li:not(.disabled) a:hover .title,
+body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
+	font-size: 14px;
+	font-weight: 400;
+}
 
-					$('.left.slider-control, .left.slider-navigator').click(function () {
 
-						if (!$(this).hasClass('disabled')) {
-							if(activeSlide == 0) {
-								// BK-19843 audio stop when slider changes.
-								if (blink.isApp) {
-									blink.rest.closeAudio();
-								}
-								redireccionar('/coursePlayer/clases2.php?editar=0&idcurso=' +
-									idcurso + '&idclase=' + that.subunits[subunit_index - 1].id + '&modo='+ modoVisualizacion + '&numSec=' +
-									that.subunits[subunit_index - 1].numSlides + slideNavParams, false, undefined);
-							} else {
-								blink.activity.showPrevSection();
-							}
-						}
-					});
+#book-index #indice .unit-content a:hover,
+#indice .units ul li a:hover,
+#indice .actividades a:hover,
+#book-index #indice .unit-content a:active,
+#indice .units ul li a:active,
+#indice .actividades a:active,
+#book-index #indice .unit-content a:focus,
+#indice .units ul li a:focus,
+#indice .actividades a:focus {
+	color: #31A2C7;
+}
 
-					$('.right.slider-control, .right.slider-navigator').click(function () {
-						if (!$(this).hasClass('disabled')) {
-							if(activeSlide == parseInt(that.subunits[subunit_index].pags) - 1) {
-								// BK-19843 audio stop when slider changes.
-								if (blink.isApp) {
-									blink.rest.closeAudio();
-								}
-								redireccionar('/coursePlayer/clases2.php?editar=0&idcurso=' +
-									idcurso + '&idclase=' + that.subunits[subunit_index + 1].id + '&modo='+ modoVisualizacion +
-									((typeof window.esPopup !== "undefined" && window.esPopup)?"&popup=1":"")  + slideNavParams,
-									false, undefined);
-							} else {
-								blink.activity.showNextSection();
-							}
-						}
-					});
+#book-index #indice .unit-content .actividades .item {
+	background: #87bacc;
+}
 
-					document.addEventListener('swipe:first:previousActivity', function(e) {
-						blink.activity.previousSlide(that.subunits, subunit_index);
-					}, false);
-					document.addEventListener('swipe:last:nextActivity', function(e) {
-						blink.activity.nextSlide(that.subunits, subunit_index);
-					}, false);
-				} else {
-					$('.left.slider-control, .left.slider-navigator').click(function () {
-						blink.activity.showPrevSection();
-					});
-					$('.right.slider-control, .right.slider-navigator').click(function () {
-						blink.activity.showNextSection();
-					});
-				}
+body:not(.isTablet) #book-index #indice .unit-content .actividades .item:hover,
+#book-index #indice .unit-content .actividades .item.active,
+#book-index #indice .unit-content .actividades .item.current {
+	background: #31a2c75c;
+}
 
-				$(document).ready(function() {
-					blink.events.on('showSlide:after', function() {
-						that.enableSliders();
-					});
-				});
-			});
-		},
-			/**
-			 * @summary Enables all slider controls and disables when appropiate
-			 */
-			enableSliders: function () {
-					// Removes disabled class to all navigation buttons and applies
-				// just if its first or last slide of all activities
-				$('.slider-control, .slider-navigator').removeClass('disabled');
-				var that = blink.activity.currentStyle,
-					subunit_index = parseInt($('.slide-counter').attr('data-subunit-index')),
-					level_six = this.subunits.length == 1 && this.subunits[0].level == 6;
-				// Navigation change depending on whether the slides are accessed from
-				// a book or from a homework link or similar
-				if (this.subunits.length !== 0 && modoVisualizacionLabel != "standalone") {
-						if (this.getActualSlideNumber(this.subunits) == 1) {
-							$('.slider-control.left, .slider-navigator.left').addClass('disabled');
-				}
-					if (this.getActualSlideNumber(this.subunits) == this.totalSlides && !level_six) {
-							$('.slider-control.right, .slider-navigator.right').addClass('disabled');
-				}
-			} else {
-						if (window.activeSlide == 0) {
-							$('.slider-control.left, .slider-navigator.left').addClass('disabled');
-				}
-					if(window.activeSlide == parseInt(that.subunits[subunit_index].pags) - 1 && !level_six){
-							$('.slider-control.right, .slider-navigator.right').addClass('disabled');
-				}
-			}
-		},
-		//BK-15873 Quitamos la funcion getEditorStyles para que herede de parent
 
-		showBookIndexInClass: function () {
-			return modoVisualizacionLabel != "standalone";
+body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
+#book-index #indice .unit-content .actividades .item.active,
+#book-index #indice .unit-content .actividades .item.current {
+	background: #ccc;
+}
 
-		},
+.cornelsen2021dev-navbar h3 {
+	width: 75%;
+	margin: auto;
+	margin-bottom: 15px;
+	font-size: 2.0rem;
+	font-weight: bold;
+}
 
-		animateNavbarOnScroll: function (scope, classNavbar) {
-			var that = scope || this,
-				navbar = ((typeof classNavbar !== "undefined" && classNavbar)?classNavbar:'cornelsen2021dev-navbar');
-			if (!blink.isApp) return;
-			var $navbar = $('.'+navbar);
-			var lastScrollTop = 0;
-			$('.js-slider-item').scroll(function () {
-				var scrollTop = $(this).scrollTop();
-				(scrollTop > lastScrollTop && scrollTop) ? $navbar.addClass('ocultar') : $navbar.removeClass('ocultar');
-				lastScrollTop = scrollTop;
-			});
-		},
+#actividad .content .header .title h3 {
+    margin-top: 0;
+    background: none;
+    color: var(--colorppal);
+    padding: 0;
+    font-size: 3.0rem;
+	border-bottom: 2px solid;
+	font-weight: bold;
+}
+#actividad .content .header .title h3::before{
+	content: '';
+	display: none;
+}
 
-		initDropdown : function () {
-			$(".bck-dropdown-button")
-				.find('.fa').text('').end() //Eliminar el &nbsp;
-				.toggle(
-					function(){
-						$(this).parent('.bck-dropdown')
-							.addClass('open')
-							.find('.fa').removeClass('fa-chevron-down').addClass('fa-chevron-up').end()
-							.find(".bck-dropdown-content").slideDown(300, function() {
-								if($(this).parent('.bck-dropdown').hasClass('activities-dropdown')
-									&& blink.activity.currentStyle.getActivePane()) {
-									var actividad = $('.tab-pane.active').attr('id');
-									var index = actividad.split('-').pop();
-									var slide = window['t' + index + '_slide'];
-									slide.onAfterShowSlide();
-								}
-							});
+.slide_main input:focus,
+.slide_main .form-control:focus {
+	border-color: #aaa;
+}
 
-					},
-					function(){
-						$(this).parent('.bck-dropdown')
-							.removeClass('open')
-							.find('.fa').removeClass('fa-chevron-up').addClass('fa-chevron-down').end()
-							.find(".bck-dropdown-content").slideUp(300);
-					}
-				);
-		},
+.slide_main .html-book input {
+    background: #fff;
+}
 
-		// Busca la id de la última slide de un dropdown con la que se ha interactuado y
-		// guarda en el suspend data.
-		// @param {string} activePane 	Id del panel en el que se encuentra la slide
-		setActivePane : function (activePane) {
-			if (!!activePane && !!scormAPI) {
-				var slideId = $(activePane).find('.class_slide').attr('data-id'),
-					parentSlide = window['t' + window.activeSlide + '_slide'];
-				parentSlide.sublocation = slideId;
-			}
-		},
+.cornelsen2021dev-navbar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 50px;
+	background: var(--colorppal);
+    border-bottom: 0;
+    border-top: 4px solid #555;
+	
+}
 
-		// Mira a ver si se ha guardado alguna slide del dropdown en el suspend data y,
-		// en caso de ser así, la pone como activa.
-		getActivePane : function () {
-			var currentSlide = window['t' + window.activeSlide + '_slide'];
-			if (currentSlide.sublocation) {
-				var activePane = $('.class_slide[data-id="' + currentSlide.sublocation + '"]')
-								.closest('.tab-pane'),
-					activeDropdown = $(activePane).closest('.bck-dropdown');
-				$(activeDropdown)
-					.find('a[href="#' + $(activePane).attr('id') + '"]')
-					.first()
-					.tab('show');
-				return true;
-			} else {
-				return true;
-			}
-		},
+.logo-publisher {
+	display: none;
+	background: none;
+}
 
-		/**
-		 * Devuelve el offsetTop del elemento que agrupa a las transparencia concatenada
-		 *
-		 * @param {object} myElement Div de la transparencia para buscar su contenedor
-		 * @returns {Boolean}
-		 */
-		calculateTopOffsetSlide: function(myElement){
-		    if(typeof myElement === "object"){
-			    var dropdown = $(myElement).parents('.bck-dropdown');
-			    if(dropdown.length>0 && typeof dropdown.offset === "function"){
-				    dropdown.find('.bck-dropdown-button').click();
-				    return dropdown.offset().top;
-			    }
-		    }
-		    return false;
- 		}
-	};
+body.is_app .cornelsen2021dev-navbar {
+	-webkit-transition: top 0.5s linear;
+	-o-transition: top 0.5s linear;
+	-moz-transition: top 0.5s linear;
+	transition: top 0.5s linear;
+}
 
-	cornelsen2021devStyle.prototype = _.extend({}, new blink.theme.styles.basic(), cornelsen2021devStyle.prototype);
+body.is_app .cornelsen2021dev-navbar.ocultar {
+	top: -136px;
+}
 
-	blink.theme.styles['cornelsen2021dev'] = cornelsen2021devStyle;
+.cornelsen2021dev-navbar .navbar-content {
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	text-align: center;
+}
 
-})( blink );
+.cornelsen2021dev-navbar .copyright {
+	color: #fff;
+	line-height: 5.0rem;
+}
 
-$(document).ready(function() {
+.slider-navigator:hover,
+.slider-navigator.disabled {
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
 
-	if (!$('body').hasClass('edit')) {
-		$(document).on('click', '.nav-tabs a', function() {
-			var actividad = $(this).attr('href');
-			var index = actividad.split('-').pop();
-			var slide = window['t' + index + '_slide'];
-			slide && slide.onAfterShowSlide();
-		});
-	}
+#actividad .workspace.chooseblanks .inline-answer a {
+	margin: -7px 2px 2px 2px;
+}
 
-	$(document).on('click', '.bck-dropdown .class_slide, .nav-tabs a', function(e){
-		var activePane;
-		if (!!$(e.target).closest('.nav-tabs').length) {
-			activePane = $(e.target).attr('href');
-		} else {
-			activePane = '#' + $(e.target).closest('.tab-pane').attr('id');
-		}
-		blink.activity.currentStyle.setActivePane && blink.activity.currentStyle.setActivePane(activePane);
-	});
+.bck-i-fullscreen figcaption {
+	margin-top: -20px;
+	border-bottom: 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	background: transparent;
+}
 
-});
+/*Icono audio*/
+#actividad .player.audio {
+	background-image: url(imagenes_difusion/img_audio.png);
+	color: #fff;
+}
+
+
+#actividad .content img.player,
+#actividad .player.audio,
+#actividad .player.video,
+#help-panel-content .player,
+#remote-alert-modal-rich .player {
+	height: 25px !important;
+	width: 27px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+	margin: 0 5px;
+	vertical-align: sub;
+}
+
+.bck-sub-label,
+.bck-file-label {
+	background: transparent;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	border-radius: 5px 5px;
+	max-width: 200px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+.bck-file-attach:before {
+	content: " ";
+	background-image: url(imagenes_difusion/icono_transcripciones.png);
+	background-repeat: no-repeat;
+	padding: 10px;
+	background-size: contain;
+	margin-top: 4px;
+	position: absolute;
+}
+
+.bck-file-attach img {
+	display: none;
+}
+
+.bck-file-attach span {
+	display: inline-block;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+/* TÍTULOS */
+.bck-title {
+	border-bottom: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    color: #000;
+}
+/*-- Título 1 --*/
+.bck-title-1:before {
+	display: none;
+}
+.bck-title-1 {
+    color: #000;
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
+.bck-title-2 {
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
+.bck-title-3 {
+    color: #000;
+    font-size: 2.0rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
+.bck-title-4 {
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 2.0rem;
+    color: #999999;
+}
+.bck-title-5 {
+	font-family: 'Source Serif Pro', serif ;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 2.8rem;
+}
+
+
+/*Énfasis */
+.bck-enfasis {
+    color: var(--colorppal);
+    font-weight: inherit;
+}
+
+/* ---- CAJAS ---*/
+.bck-box {
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+	background: inherit;
+	padding: 20px;
+	margin: 15px;
+}
+.bck-box.center {
+    text-align: inherit;
+}
+.texto_curso .bck-box p {
+    margin: 0;
+}
+.bck-box .bck-content {
+    padding: inherit;
+}
+/*Caja 1 */
+.bck-box.bck-box-1:before {
+	display: none;
+}
+.bck-box.bck-box-1:after {
+	display: none;
+}
+.bck-box.bck-box-1 {
+    margin-top: 15px;
+    background: #F8F8F8;
+    border: 2px solid #999999;
+}
+.bck-box-1 > .bck-title {
+    border-bottom: 0px solid #eee;
+    color: #000000;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+.bck-box.bck-box-1 > .bck-content {
+    padding: 0;
+}
+
+/* CAJA 2 */
+.bck-box.bck-box-2 .bck-title:before {
+	display: none;
+}
+.bck-box.bck-box-2 {
+    background: var(--colortrans);
+    border: 2px solid var(--colorppal);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    text-align: inherit;
+    padding: 0;
+}
+
+/*CAJA 3 */
+.bck-box.bck-box-3 {
+    background-color: #E5E5E5;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    max-width: none;
+    padding: 15px 60px;
+}
+.bck-box-3 > .bck-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Desplegable*/
+.bck-dropdown {
+	-moz-box-shadow: 0 3px 7px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 3px 7px 0px rgb(0 0 0 / 20%);
+	box-shadow: 0 3px 7px 0px rgb(0 0 0 / 20%);
+	margin: 15px 0;
+}
+.bck-dropdown-button {
+    padding: 10px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+}
+.bck-dropdown .bck-dropdown-icon > .fa,
+ .bck-dropdown-2 .bck-dropdown-icon > .fa {
+	 display: none;
+}
+.bck-dropdown .bck-dropdown-icon,
+ .bck-dropdown-2 .bck-dropdown-icon {
+    color: #1A73E9;
+}
+.bck-dropdown .bck-dropdown-icon > .fa,
+ .bck-dropdown-2 .bck-dropdown-icon > .fa {
+    border: 0;
+    position: absolute;
+    right: 11px;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+.fa-chevron-down:before {
+    content: "\f078";
+    position: absolute;
+    color: #1A73E9;
+    right: 24px;
+    top: 21px;
+}
+.fa-chevron-up:before {
+    content: "\f077";
+    position: absolute;
+    color: #1A73E9;
+    right: 24px;
+    top: 21px;
+}
+.bck-dropdown .bck-dropdown-titulo,
+ .bck-dropdown-2 .bck-dropdown-titulo {
+    color: #000;
+    font-size: 2.0rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: -28px;
+    margin-left: -46px;
+}
+.bck-dropdown-content {
+    padding: 0 10px 20px 20px;
+    background-color: #E5E5E5;
+}
+
+/*DESPLEGABLE*/
+/*Flipbox*/
+body:not(.edit) .bck-flipbox {
+		margin: 15px 0;
+		font-size: 18px;
+}
+
+body:not(.edit) .bck-flipbox-face.front {
+	border: 0;
+    background: white;
+    -moz-box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+    -webkit-box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+    box-shadow: 0px 5px 9px rgb(26 115 233 / 40%);
+    color: #000;
+}
+body:not(.edit) .bck-flipbox-face.back {
+	color: #595959;
+    border: 2px solid #1A73E9;
+    background: #FFF;
+    -moz-box-shadow: 0 0 6px 0px #1a73e94d;
+    -webkit-box-shadow: 0 0 6px 0px #1a73e94d;
+    box-shadow: 0 0 6px 0px #1a73e94d;
+}
+body:not(.edit) .front .bck-flipbox-title, body:not(.edit) .front .bck-flipbox-section {
+    color: #000;
+}
+body:not(.edit) .back .bck-flipbox-title,
+ body:not(.edit) .back .bck-flipbox-section {
+    color: #000;
+}
+/*----*/
+
+/*LISTAS DESORDENADAS*/
+.texto_curso ul li {
+	padding-left: 20px;
+}
+
+.texto_curso ul li:before,
+.workspace ul li ul li:before,
+.cke_contents ul li:before,
+.preview ul li:before,
+.classify-item ul li:before,
+#actividad .workspace.multiple-choice .js-item ul li:before,
+#actividad .workspace.matching .box ul li:before,
+#actividad .workspace.ordenar .js-rank-item ul li:before {
+	height: 6px;
+	width: 6px;
+	background-color: #333;
+	color: #333;
+	border-radius: 50%;
+}
+
+/*lista desordenada por defecto, sin seleccionar estilo para la ul*/
+#actividad .content .texto_curso ul li:before,
+#actividad .content .workspace ul li ul li:before {
+	height: 9px;
+	width: 9px;
+	background-color: #fff;
+	color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#actividad .content .texto_curso ul li::before,
+#actividad .content .workspace ul li ul li::before,
+#actividad .content .texto_curso .bck-ul li::before,
+#actividad .content .workspace ul li .bck-ul li::before,
+#actividad .popover-background.shown .popover-content>ul>li::before {
+	content: "";
+	height: 6px;
+	width: 6px;
+	background-color: #333;
+	color: #333;
+	border-radius: 50%;
+	position: absolute;
+	margin-top: .6em;
+	margin-left: -10px;
+}
+
+#actividad .content .cke_contents .bck-ol li:before,
+#actividad .content .texto_curso .bck-ol li:before,
+#actividad .popover-content .bck-ol li:before,
+#actividad .content .workspace ul li .bck-ol li:before {
+	content: counter(bck-li-counter);
+	position: relative;
+	text-align: left;
+	font-size: 1.9rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-left: -10px;
+}
+
+/*LISTA ORDENADA 1*/
+#actividad .content .cke_contents .bck-ol-1,
+#actividad .content .texto_curso .bck-ol-1,
+#actividad .content .workspace ul li .bck-ol-1 {
+	list-style-type: none;
+	counter-reset: bck-li-counter;
+}
+
+#actividad .content .cke_contents .bck-ol-1 li,
+#actividad .content .cke_contents .bck-ol-1 li,
+#actividad .content .texto_curso .bck-ol-1 li,
+#actividad .popover-content .bck-ol-1 li,
+#actividad .content .workspace ul li .bck-ol-1 li {
+	counter-increment: bck-li-counter;
+	padding-left: 0px;
+	position: relative;
+	z-index: 0;
+	font-weight: 700;
+}
+
+#actividad .content .cke_contents .bck-ol-1 li:before,
+#actividad .content .texto_curso .bck-ol-1 li:before,
+#actividad .popover-content .bck-ol-1 li:before,
+#actividad .content .workspace ul li .bck-ol-1 li:before {
+	margin-left: -13px;
+}
+
+#actividad .content .cke_contents .bck-ol-1 li:before,
+#actividad .content .texto_curso .bck-ol-1 li:before,
+#actividad .popover-content .bck-ol-1 li:before,
+#actividad .content .workspace ul li .bck-ol-1 li:before {
+	content: counter(bck-li-counter) ".";
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	position: absolute;
+	text-align: right;
+	color: #333;
+	font-size: 1.8rem;
+	width: 29px;
+	margin-top: 0px;
+	left: -20px;
+	top: 0px;
+}
+
+
+/*CAJA POP-UP*/
+.info-popover .popover-title:before,
+.popover-template .popover-title:before {
+	color: #728fa6;
+}
+
+.info-popover .popover-title,
+.popover-template .popover-title {
+	background: #728fa6;
+}
+
+.info-template .info-title {
+	color: #333;
+}
+
+.info-template .info-title.shown {
+	margin: 0 3px 12px 0;
+}
+
+.info-template .info-title.shown:before {
+	display: none;
+}
+
+/*icono info*/
+.fa-info:before {
+	content: "+";
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2.2rem;
+	line-height: 20px;
+	color: #333;
+}
+
+#actividad .info-button {
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 0px;
+	-webkit-box-shadow: 0 0 2px #555;
+	-moz-box-shadow: 0 0 2px #555;
+	box-shadow: 0 0 2px #555;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #fff;
+	color: #1a171b;
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+}
+
+/*Pop-up flotante*/
+.info-template {
+	position: fixed;
+	top: 100px;
+	right: 0;
+	-webkit-transform: translateX(105%);
+	-moz-transform: translateX(105%);
+	-ms-transform: translateX(105%);
+	-o-transform: translateX(105%);
+	transform: translateX(105%);
+	z-index: 1000;
+	width: 135px;
+	height: auto;
+	-webkit-box-shadow: 0 0 2px #555;
+	-moz-box-shadow: 0 0 2px #555;
+	box-shadow: 0 0 2px #555;
+	-webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+	background: #fff;
+	padding: 15px 5px 0;
+	-webkit-transition: all ease-in-out .5s;
+	-o-transition: all ease-in-out .5s;
+	-moz-transition: all ease-in-out .5s;
+	transition: all ease-in-out .5s;
+}
+/*Dropdown 1*/
+.bck-dropdown.bck-dropdown-1 {
+	background-color: #9D9D9C;
+}
+
+.bck-dropdown-1 .bck-dropdown-icon {
+	background-color: #9D9D9C;
+}
+
+
+/*AJUSTES ACTIVIDADES*/
+/*Verdadero y falso*/
+#actividad .workspace.true-false .tf-option {
+	display: inline-block;
+	margin-left: 50px;
+}
+
+/*Fill in the blanks*/
+.fillblanks-draggable-wrapper {
+	text-align: left;
+	margin-bottom: 20px;
+	margin-left: 47px;
+}
+
+/*clasificar*/
+#actividad .workspace.clasificar .clasificar_lista>ul {
+	display: inline-block;
+	min-height: 70px;
+	text-align: left;
+	margin-left: 47px;
+}
+
+#actividad .workspace.clasificar .clasificar_lista .classify-item {
+	background: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*tipo test*/
+
+#actividad .workspace.test .checkbox-option label.filter-label,
+#actividad .workspace.test .radio-option label.filter-label,
+#actividad .workspace.true-false .checkbox-option label.filter-label,
+#actividad .workspace.true-false .radio-option label.filter-label {
+	font-size: 1.8rem;
+	font-weight: 300;
+	margin-left: 20px;
+}
+
+/*parejas cartas*/
+
+#actividad .workspace.memory .flip-container p {
+	font-size: 1.5rem;
+}
+
+/*botonera general*/
+#actividad .class_slide .review {
+	margin-top: 40px;
+	text-align: left;
+	margin-left: 40px;
+}
+
+.btn-danger,
+.btn-danger[disabled] {
+	color: #fff;
+	border-color: transparent;
+	border-radius: 0px;
+}
+
+/* modo correcion/revision */
+.info-alumno .nombre-alumno {
+	max-width: 189px;
+}
+
+/**Iconos**/
+.item-container .icon:before {
+	vertical-align: top;
+}
+
+.item-container .icon-critical:before {
+	background-image: url(imagenes_difusion/critical_thinking_dark.png);
+}
+
+
+/**TABLA**/
+table,
+.bck-table {
+	border: 1px solid #ccc;
+}
+
+table td,
+.bck-table td {
+	border-color: #ccc;
+}
+
+td,
+th {
+	padding-left: 10px;
+}
+
+/*Boton toc - boton reininciar ejercicio*/
+.btn-primary {
+	background-color: #428bcac9;
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary.disabled:focus {
+	background-color: #31A2C7;
+	border-radius: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+	background-color: #ac0910;
+}
+
+
+
+
+
+
