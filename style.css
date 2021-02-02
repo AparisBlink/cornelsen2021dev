@@ -1,4 +1,9 @@
 /* Fonts */
+
+/*font-family: 'Source Serif Pro', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 :root {
 	--colorppal: #DE2922;
 }
@@ -112,10 +117,17 @@ body:not(.isTablet) #indice .units ul li:not(.disabled) a .title:hover {
 }
 
 body {
-	font-size: 1.8rem;
+	font-size: 2.0rem;
 	font-weight: normal;
 	text-align: left;
 	font-family: 'Source Sans Pro', sans-serif;
+}
+.texto_curso p {
+	line-height: 3.0rem !important;
+	margin: 1.5rem 0;
+}
+#actividad .texto_curso {
+    font-size: 2.0rem;
 }
 
 .slide-wrapper {
@@ -276,8 +288,10 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
 	z-index: 100;
 	width: 100%;
 	height: 50px;
-	border-bottom: 1px solid black;
-	background: #545759;
+	background: var(--colorppal);
+    border-bottom: 0;
+    border-top: 4px solid #555;
+	
 }
 
 .logo-publisher {
@@ -385,7 +399,57 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
 }
 
 /* TÍTULOS */
+.bck-title {
+	border-bottom: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    color: #000;
+}
+/*-- Título 1 --*/
+.bck-title-1:before {
+	display: none;
+}
+.bck-title-1 {
+    color: #000;
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
+.bck-title-2 {
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
+.bck-title3 {
+    color: #000;
+    font-size: 2.0rem;
+    font-weight: bold;
+    line-height: 3.0rem;
+    margin: 0;
+}
 
+/*Énfasis */
+.bck-enfasis {
+    color: var(--colorppal);
+    font-weight: inherit;
+}
+/*-Enfasis 2*/
+.bck-enfasis-2 {
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 2.0rem;
+    color: #999999;
+}
+/*-Enfasis 3*/
+.bck-enfasis-3 {
+	font-family: 'Source Serif Pro', serif ;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 2.8rem;
+}
 
 /*LISTAS DESORDENADAS*/
 .texto_curso ul li {
