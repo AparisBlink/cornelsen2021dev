@@ -152,14 +152,7 @@ body {
 
 #actividad a,
 body:not(.edit) #actividad a:not(.cke_button):not(.zoom_flag_img) {
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	background-color: transparent;
-	padding: 0px 5px;
-	color: #333;
-	font-weight: 600;
-	text-decoration: none;
+    color: #1a73e9;
 }
 /*INDICE LATERAL*/
 
@@ -347,7 +340,7 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
 
 /*Icono audio*/
 #actividad .player.audio {
-	background-image: url(imagenes_difusion/img_audio.png);
+	background-image: url(images/Cornelsen_audio_icon);
 	color: #fff;
 }
 
@@ -381,13 +374,14 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
 }
 
 .bck-file-attach:before {
-	content: " ";
-	background-image: url(imagenes_difusion/icono_transcripciones.png);
-	background-repeat: no-repeat;
-	padding: 10px;
-	background-size: contain;
-	margin-top: 4px;
-	position: absolute;
+	content: "\f15b";
+    background-image: none;
+    background-repeat: no-repeat;
+    padding: 1px 0px;
+    background-size: contain;
+    margin-top: 0;
+    position: absolute;
+    font-family: 'FontAwesome';
 }
 
 .bck-file-attach img {
@@ -534,10 +528,7 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
     position: relative;
     cursor: pointer;
 }
-.bck-dropdown .bck-dropdown-icon > .fa,
- .bck-dropdown-2 .bck-dropdown-icon > .fa {
-	 display: none;
-}
+
 .bck-dropdown .bck-dropdown-icon,
  .bck-dropdown-2 .bck-dropdown-icon {
     color: #1A73E9;
@@ -732,7 +723,8 @@ body:not(.edit) .back .bck-flipbox-title,
     text-align: center;
     color: #1A73E9;
     border-bottom: 0;
-    font-weight: bold;
+	font-weight: bold;
+    background-color: #FFF;
 }
 .close-popover {
     color: #1a73e9;
@@ -830,7 +822,31 @@ body:not(.edit) .back .bck-flipbox-title,
 	background-color: #9D9D9C;
 }
 
-
+/*TABS*/
+body:not(.edit) .bck-tabs-box {
+    background-color: #FFF;
+	border: 0;
+	-moz-box-shadow: 0 3px 7px #00000026;
+	-webkit-box-shadow: 0 3px 7px #00000026;
+	box-shadow: 0 3px 7px #00000026;
+}
+.bck-tabtitles {
+    background-color: #fff;
+}
+.bck-tabtitles:active,
+ .bck-tabtitles:focus,
+  .bck-tabtitles:hover,
+   .bck-tabtitles:visited {
+    color: #1A73E9;
+    background: white;
+    border-bottom: 2px solid #1A73E9;
+}
+body:not(.edit) .bck-tabcontents .div-contents {
+    background-color: #F8F8F8;
+}
+body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
+	background-color: #F8F8F8;
+}
 /*AJUSTES ACTIVIDADES*/
 /*Verdadero y falso*/
 #actividad .workspace.true-false .tf-option {
