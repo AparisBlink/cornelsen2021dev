@@ -423,33 +423,33 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
     line-height: 3.0rem;
     margin: 0;
 }
-.bck-title3 {
+.bck-title-3 {
     color: #000;
     font-size: 2.0rem;
     font-weight: bold;
     line-height: 3.0rem;
     margin: 0;
 }
+.bck-title-4 {
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 2.0rem;
+    color: #999999;
+}
+.bck-title-5 {
+	font-family: 'Source Serif Pro', serif ;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 2.8rem;
+}
+
 
 /*Énfasis */
 .bck-enfasis {
     color: var(--colorppal);
     font-weight: inherit;
 }
-/*-Enfasis 2*/
-.bck-enfasis-2 {
-    font-size: 1.6rem;
-    margin: 0;
-    line-height: 2.0rem;
-    color: #999999;
-}
-/*-Enfasis 3*/
-.bck-enfasis-3 {
-	font-family: 'Source Serif Pro', serif ;
-    font-size: 1.8rem;
-    margin: 0;
-    line-height: 2.8rem;
-}
+
 
 /*LISTAS DESORDENADAS*/
 .texto_curso ul li {
