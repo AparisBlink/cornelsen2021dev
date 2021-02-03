@@ -156,7 +156,6 @@ body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
 }
 
 body {
-	font-size: 2.0rem;
 	font-weight: normal;
 	text-align: left;
 	font-family: 'Source Sans Pro', sans-serif;
