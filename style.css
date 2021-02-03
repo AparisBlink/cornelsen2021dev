@@ -39,7 +39,7 @@ body:not(.isTablet) #indice .units ul li:hover:not(.disabled),
 	background: var(--colortrans);
 }
 body #indice .units ul li.active:hover:not(.disabled) {
-	background: var(--colortrans);
+	background: var(--colorppal);
 	color: #FFF;
 }
 
@@ -61,7 +61,6 @@ body:not(.isTablet) #indice .units ul li:not(.disabled) a:hover .title {
 	margin-left: 30px;
 }
 body:not(.isTablet) #indice .units ul li.active:not(.disabled) a:hover .title {
-	color: var(--colorppal);
 	margin-left: 30px;
 }
 
