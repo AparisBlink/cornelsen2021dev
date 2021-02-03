@@ -14,17 +14,81 @@ strong {
 	font-weight: bold;
 }
 
-/*TOC*/
-#indice .units ul li {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    -moz-box-shadow: 1px 3px 4px #00000021;
-    -webkit-box-shadow: 1px 3px 4px #00000021;
-    box-shadow: 0px 4px 4px #0000003b;
-    background: #FFF;
-    border: 2px solid var(--colorppal);
-}
+/* TOC */
+:root #indice {
+    --colordeg: #000000;
+    --colordeg2: #5B676C;
+    --colorppal: #5C676D;
+    }
+    #indice .units ul li {
+        background: linear-gradient(99deg, var(--colordeg) 0%, var(--colordeg2) 100%);
+        opacity: 0.8;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -moz-box-shadow: 3px 5px 5px #00000036;
+        -webkit-box-shadow: 3px 5px 5px #00000036;
+        box-shadow: 3px 5px 5px #00000036;
+        margin-bottom: 11px;
+    }
+    #indice .units ul li.active:not(.disabled),
+    body:not(.isTablet) #indice .units ul li:hover:not(.disabled), #indice .units ul li:focus:not(.disabled) {
+        background: linear-gradient(99deg, var(--colordeg) 0%, var(--colordeg2) 100%);
+        opacity: 1;
+    }
+
+    #indice .units ul li a:not(.delete) {
+        padding: 0;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+    }
+    #indice .units ul li a .title {
+        font-family: 'Durotype Aspira', sans-serif;
+        padding: 14px 16px;
+        color: white;
+        -moz-transition: margin-left 0.2s ease-in-out;
+        -webkit-transition: margin-left 0.2s ease-in-out;
+        transition: margin-left 0.2s ease-in-out;
+    }
+    body:not(.isTablet) #indice .units ul li:not(.disabled) a:hover .title,
+    body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
+        color: #fff;
+        margin-left: 30px;
+    }
+    #indice .col-indice {
+        font-family: 'Durotype Aspira';
+    }
+    #indice .unit-content .header.default {
+        background: linear-gradient(99deg, #020303 0%, #5a656a 100%) !important;
+    }
+    #indice .js-list-activities a:hover,
+    #indice .js-list-activities a:active,
+    #indice .js-list-activities a:focus {
+        color: #566065;
+        margin-left: 12px;
+    }
+    #indice .units ul li a:before {
+        content: "\f054";
+        color: var(--colorppal);
+        font-family: 'FontAwesome';
+        position: absolute;
+        padding: 0px 0px 0px 0px;
+        margin-top: 12px;
+        opacity: 0;
+    }
+    body:not(.isTablet) #indice .units ul li:not(.disabled) a:hover:before,
+    #indice .units ul li.active a:before {
+        padding: 0px 0px 0px 27px;
+        color: #fff;
+        -moz-transition: padding 0.5s;
+        -webkit-transition: padding 0.5s;
+        transition: padding 0.5s;
+        opacity: 1;
+    }
 
 
 /*General */
