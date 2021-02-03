@@ -82,13 +82,84 @@ body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
     color: var(--colorppal);
 }
 /*--*/
-
-/*General */
+/* MENÚ DESPLEGABLE */
 #book-index #indice .units ul li a .title {
 	margin: 0;
-	font-size: 14px;
-	font-weight: 400;
+	font-size: 16px;
+	font-weight: bold;
 }
+#book-index #indice .units ul li a:not(.delete) {
+    padding: 5px 20px 5px 20px;
+    border-bottom: 2px solid var(--colorppal);
+    background-color: #e3e3e3;
+}
+body:not(.isTablet) #book-index #indice .units ul li:not(.disabled) a:hover, #book-index #indice .units ul li.active a {
+    background: var(--colorppal);
+}
+#book-index #indice .units ul li a:hover .title {
+    margin: 0;
+    font-size: inherit;
+    color: #FFF;
+}
+#book-index .col-main {
+    background: var(--colorppal);
+}
+#book-index #indice .unit-content .content .title-buttons {
+    top: auto;
+    text-align: center;
+    border-bottom: 0;
+    padding: 0 0 -2px 0;
+    margin: 0 0 12px 0;
+}
+#book-index .units ul li a .title {
+    padding: 12px 0px;
+}
+#book-index #indice .unit-content .content .title-buttons .btn {
+    background: #FFF;
+    color: var(--colorppal);
+    padding: 5px 15px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+#book-index #indice .unit-content .actividades .item {
+    padding: 12px 15px;
+    background: none;
+    color: white;
+}
+#book-index #indice .unit-content .actividades .item .title {
+	color: #FFF;
+	font-weight: bold;
+}
+body:not(.isTablet) #book-index #indice .unit-content .actividades .item:hover,
+ #book-index #indice .unit-content .actividades .item.active,
+  #book-index #indice .unit-content .actividades .item.current {
+    color: #fff;
+    background: #0000002e;
+}
+body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
+ #book-index #indice .unit-content .actividades .item.active,
+  #book-index #indice .unit-content .actividades .item.current {
+    background: #0000002e;
+}
+#book-index #indice .unit-content a, #indice .units ul li a, #indice .actividades a {
+    color: #fff;
+}
+#book-index #indice .unit-content a:hover,
+ #indice .units ul li a:hover,
+  #indice .actividades a:hover,
+   #book-index #indice .unit-content a:active,
+	#indice .units ul li a:active,
+	 #indice .actividades a:active,
+	  #book-index #indice .unit-content a:focus,
+	   #indice .units ul li a:focus,
+	    #indice .actividades a:focus {
+    color: #fff;
+	font-weight: bold;
+}
+
+/*General */
+
 #swipeview-slider > div {
 	background-color: #eee;
 }
