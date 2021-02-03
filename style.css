@@ -38,6 +38,9 @@ body:not(.isTablet) #indice .units ul li:hover:not(.disabled),
  #indice .units ul li:focus:not(.disabled) {
 	background: var(--colortrans);
 }
+body #indice .units ul li.active:hover:not(.disabled) {
+	background: var(--colortrans);
+}
 
 #indice .units ul li a:not(.delete) {
 	padding: 0;
