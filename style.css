@@ -40,6 +40,7 @@ body:not(.isTablet) #indice .units ul li:hover:not(.disabled),
 }
 body #indice .units ul li.active:hover:not(.disabled) {
 	background: var(--colortrans);
+	color: #FFF;
 }
 
 #indice .units ul li a:not(.delete) {
