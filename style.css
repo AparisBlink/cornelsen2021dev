@@ -224,56 +224,6 @@ body:not(.isTablet) #book-index #indice .units ul li:not(.disabled) a:hover,
 }
 
 
-#book-index #indice .unit-content .actividades .item .title {
-	font-size: 14px;
-}
-
-#indice .unit-content .actividades .item .nota {
-	background-color: #428bca;
-}
-
-
-#indice .units ul li.active:not(.disabled),
-#indice .units ul li:focus:not(.disabled) {
-	background: #31A2C7;
-}
-
-
-body:not(.isTablet) #indice .units ul li:not(.disabled) a:hover .title,
-body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
-	font-size: 14px;
-	font-weight: 400;
-}
-
-
-#book-index #indice .unit-content a:hover,
-#indice .units ul li a:hover,
-#indice .actividades a:hover,
-#book-index #indice .unit-content a:active,
-#indice .units ul li a:active,
-#indice .actividades a:active,
-#book-index #indice .unit-content a:focus,
-#indice .units ul li a:focus,
-#indice .actividades a:focus {
-	color: #31A2C7;
-}
-
-#book-index #indice .unit-content .actividades .item {
-	background: #87bacc;
-}
-
-body:not(.isTablet) #book-index #indice .unit-content .actividades .item:hover,
-#book-index #indice .unit-content .actividades .item.active,
-#book-index #indice .unit-content .actividades .item.current {
-	background: #31a2c75c;
-}
-
-
-body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
-#book-index #indice .unit-content .actividades .item.active,
-#book-index #indice .unit-content .actividades .item.current {
-	background: #ccc;
-}
 
 .cornelsen2021dev-navbar h3 {
 	width: 75%;
