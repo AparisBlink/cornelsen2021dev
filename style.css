@@ -82,6 +82,7 @@ body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
     color: var(--colorppal);
 }
 /*--*/
+
 /* MENÚ DESPLEGABLE */
 #book-index #indice .units ul li a .title {
 	margin: 0;
@@ -98,7 +99,7 @@ body:not(.isTablet) #book-index #indice .units ul li:not(.disabled) a:hover, #bo
 }
 #book-index #indice .units ul li a:hover .title {
     margin: 0;
-    font-size: inherit;
+    font-size: 16px;
     color: #FFF;
 }
 #book-index .col-main {
