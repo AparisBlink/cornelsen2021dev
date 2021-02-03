@@ -15,36 +15,15 @@ strong {
 }
 
 /*TOC*/
-#indice .units ul li.active:not(.disabled),
-#indice .units ul li:focus:not(.disabled) {
-	background-color: #333 !important;
-}
-
-body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
-	font-size: 14px;
-	font-weight: bold;
-}
-
-body:not(.isTablet) #indice .units ul li:hover:not(.disabled),
-#indice .units ul li:hover:not(.disabled) {
-	background: #b7b7b7;
-
-}
-
-body:not(.isTablet) #indice .units ul li:not(.disabled) a .title:hover {
-	color: #fff;
-}
-
-#list-units .unittag_textbook_cornelsen2021dev {
-	background: #31a2c7 !important;
-}
-
-#list-units .unittag_textbook_cornelsen2021dev:hover {
-	background: #3333337d !important;
-}
-
-.units ul#list-units .unittag_textbook_cornelsen2021dev a .title {
-	color: #ffffff;
+#indice .units ul li {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -moz-box-shadow: 1px 3px 4px #00000021;
+    -webkit-box-shadow: 1px 3px 4px #00000021;
+    box-shadow: 0px 4px 4px #0000003b;
+    background: #FFF;
+    border: 2px solid var(--colorppal);
 }
 
 
@@ -145,11 +124,11 @@ body {
 /*tamaño enunciado listas*/
 
 #actividad .pregunta .texto_curso {
-	font-size: 1.8rem;
+    font-size: 2.0rem;
 }
 
 #actividad textarea {
-    font-size: 18px;
+    font-size: 2.0rem;
 }
 
 /*ENLACE WEB*/
