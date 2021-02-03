@@ -618,17 +618,19 @@ body:not(.edit) .back .bck-flipbox-title,
 /*----*/
 
 /*Ajuste general listas */
-.texto_curso ul,
- .texto_curso ol,
-  .workspace:not(.multiple-choice,.matching,.ordenar,.clasificar,.test) ul li ul,
-   .workspace:not(.multiple-choice,.matching,.ordenar,.clasificar,.test) ul li ol,
-	.cke_contents ul,
-	 .cke_contents ol,
-	  .popover-content ul,
-	   .popover-content ol {
-		   padding: 0;
-	   }
-
+#actividad .texto_curso li,
+ #actividad .workspace ul li li {
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+#actividad .content .texto_curso .bck-ul,
+#actividad .content .cke_contents .bck-ul,
+ #actividad .content .texto_curso .bck-ol,
+ #actividad .content .cke_contents .bck-ol
+  {
+    padding: 0;
+}
 /*LISTAS DESORDENADAS*/
 .texto_curso ul li {
 	padding-left: 20px;
@@ -650,16 +652,6 @@ body:not(.edit) .back .bck-flipbox-title,
 }
 
 /*lista desordenada por defecto, sin seleccionar estilo para la ul*/
-#actividad .content .texto_curso ul li:before,
-#actividad .content .workspace ul li ul li:before {
-	height: 9px;
-	width: 9px;
-	background-color: #fff;
-	color: #fff;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-}
 
 #actividad .content .texto_curso ul li::before,
 #actividad .content .workspace ul li ul li::before,
@@ -669,25 +661,27 @@ body:not(.edit) .back .bck-flipbox-title,
 	content: "";
 	height: 6px;
 	width: 6px;
-	background-color: #333;
-	color: #333;
+	background-color: #999999;
+	color: #999999;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	position: absolute;
 	margin-top: .6em;
 	margin-left: -10px;
 }
 
-#actividad .content .cke_contents .bck-ol li:before,
-#actividad .content .texto_curso .bck-ol li:before,
-#actividad .popover-content .bck-ol li:before,
-#actividad .content .workspace ul li .bck-ol li:before {
-	content: counter(bck-li-counter);
-	position: relative;
-	text-align: left;
-	font-size: 1.9rem;
-	font-family: 'Source Sans Pro', sans-serif;
-	margin-left: -10px;
+/*Lista desordenada 2*/
+#actividad .content .texto_curso .bck-ul-2 li::before,
+ #actividad .content .workspace ul li .bck-ul-2 li::before {
+    content: "\f061";
+    font-family: 'FontAwesome';
+    background: none;
+    margin-top: 0px;
+    margin-left: -15px;
+    font-size: 16px;
 }
+
 /*General ordenadas*/
 #actividad .content .texto_curso .bck-ol li:before,
  #actividad .popover-content .bck-ol li:before,
@@ -697,7 +691,9 @@ body:not(.edit) .back .bck-flipbox-title,
     text-align: left;
     font-size: 1.9rem;
     font-family: 'Source Sans Pro', sans-serif;
-    margin-left: 0; 
+	margin-left: -10px; 
+	left: 0;
+	width: auto;
  }
 /*LISTA ORDENADA 1*/
 #actividad .content .cke_contents .bck-ol-1 li,
@@ -715,19 +711,40 @@ body:not(.edit) .back .bck-flipbox-title,
  #actividad .content .texto_curso .bck-ol-1 li:before,
   #actividad .popover-content .bck-ol-1 li:before,
    #actividad .content .workspace ul li .bck-ol-1 li:before {
-content: counter(bck-li-counter) "";
-font-family: 'Source Sans Pro', sans-serif;
-font-weight: normal;
-position: relative;
-color: #999999;
-font-size: 2.0rem;
-width: auto;
-margin-top: 0px;
-left: 0;
-top: 0px;
-margin-right: 10px;
-margin-left: 0px;
+	content: counter(bck-li-counter) "";
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
+	position: relative;
+	color: #999999;
+	font-size: 2.0rem;
+	width: auto;
+	margin-top: 0px;
+	left: 0;
+	top: 0px;
+	margin-right: 10px;
+	margin-left: 0px;
 }
+
+/*Lista ordenada 2*/
+#actividad .content .texto_curso .bck-ol-2 li,
+ #actividad .popover-content .bck-ol-2 li,
+  #actividad .content .workspace ul li .bck-ol-2 li {
+    counter-increment: bck-li-counter;
+    padding-left: 10px;
+    position: relative;
+}
+#actividad .content .texto_curso ol.bck-ol-2 li:before,
+ #actividad .popover-content ol.bck-ol-2 li:before,
+  #actividad .content .workspace ul li ol.bck-ol-2 li:before {
+    content: counter(bck-li-counter, lower-alpha) ")";
+    padding-right: 0px;
+    text-align: center;
+    color: #999999;
+    font-weight: normal;
+    margin-right: 5px;
+    top: -2px;
+}
+
 
 /*CAJA POP-UP*/
 .info-popover .popover-title:before,
