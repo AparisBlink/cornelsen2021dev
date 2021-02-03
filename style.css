@@ -182,49 +182,7 @@ body:not(.edit) #actividad a:not(.cke_button):not(.zoom_flag_img) {
 	color: #1a73e9;
 	background-color: transparent;
 }
-/*INDICE LATERAL*/
-
-#indice .units ul li:not(.add) a .title {
-	font-size: 14px;
-	font-weight: 400;
-	margin-left: 10px;
-}
-
-
-body:not(.isTablet) #book-index #indice .units ul li:not(.disabled) a:hover,
-#book-index #indice .units ul li.active a {
-	background: #b7b7b7;
-}
-
-
-#book-index .col-main {
-	background: #31A2C7;
-}
-
-
-#indice .unit-content .header .title {
-	color: #fff;
-	background: transparent;
-	float: left;
-	font-size: 28px;
-	font-weight: 700;
-	line-height: 34px;
-	padding: 5px 20px;
-	height: 88px;
-	margin: 5px 140px 20px 8px;
-	overflow: hidden;
-	z-index: 1;
-	display: block;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-}
-
-
-
+/*--*/
 .cornelsen2021dev-navbar h3 {
 	width: 75%;
 	margin: auto;
