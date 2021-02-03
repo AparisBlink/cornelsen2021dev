@@ -73,10 +73,13 @@ body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
 #indice .unit-content .header.default {
 	background: var(--colorppal) !important;
 }
-#indice .js-list-activities a:hover,
-#indice .js-list-activities a:active,
-#indice .js-list-activities a:focus {
+#indice a:hover,
+#indice a:active,
+#indice a:focus {
 	color: var(--colorppal);
+}
+#indice .btn-primary {
+    color: var(--colorppal);
 }
 /*--*/
 
