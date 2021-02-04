@@ -154,7 +154,7 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
 	background-color: #eee;
 }
 #actividad .class_slide {
-    padding: 40px 40px 0px;
+    padding: 40px 60px 0px;
 }
 
 /*Input Blanco*/
@@ -167,7 +167,7 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
 }
 #actividad .carousel-inner .item-container {
     background-image: none;
-    max-width: 1200px;
+    max-width: 1080px;
     -webkit-box-shadow:  #00000029 6px 3px 8px;
     -moz-box-shadow:  #00000029 6px 3px 8px;
     box-shadow: #00000029 6px 3px 8px;
@@ -465,7 +465,7 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
     text-align: left;
 	background: inherit;
 	padding: 20px;
-	margin: 15px;
+	margin: 15px 0;
 }
 .bck-box.center {
     text-align: inherit;
@@ -527,8 +527,8 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
 /*CAJA 3 */
 .bck-box.bck-box-3 {
     background-color: #E5E5E5;
-    width: calc(100% + 80px);
-    margin-left: -40px;
+    width: calc(100% + 120px);
+    margin-left: -60px;
     max-width: none;
     padding: 15px 60px;
 }
@@ -916,6 +916,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 /*Rellenar espacios*/
 .slide_main input {
     color: #1a73e9;
+    border-bottom: 3px solid;
 }
 .fillblanks-draggable-wrapper .response {
     -moz-box-shadow: 0px 5px 4px #00000021;
@@ -942,6 +943,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;
     -moz-box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;
     box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;
+    border-color: #1a73e9;
 }
 .fillblanks-draggable .drag-over {
     border-top-color: #1a73e95e;
@@ -951,6 +953,9 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;
     -moz-box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;
     box-shadow: 0px 1px 1px rgb(0 0 0 / 8%) inset, 1px 3px 7px #1a73e95e;	  
+}
+.form-control {
+    color: #1a73e9; 
 }
 /*Arrastrar imagen a espacios*/
 .fillblankimages-draggable .drag-over {
@@ -1255,6 +1260,15 @@ th {
 
 
 
-
-
+/*MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+#actividad .carousel-inner .class_slide {
+    padding: 40px 40px 0px;
+}
+.bck-box.bck-box-3 {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    padding: 15px 40px;
+}
+}
 
