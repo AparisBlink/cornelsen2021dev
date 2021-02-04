@@ -727,7 +727,7 @@ body:not(.edit) .back .bck-flipbox-title,
 }
 
 /*Lista ordenada 2*/
-#actividad .content .texto_curso .bck-ol-2 li,
+#actividad .content .cke_contents .bck-ol-2 li,
 #actividad .content .texto_curso .bck-ol-2 li,
  #actividad .popover-content .bck-ol-2 li,
   #actividad .content .workspace ul li .bck-ol-2 li {
@@ -735,6 +735,7 @@ body:not(.edit) .back .bck-flipbox-title,
     padding-left: 10px;
     position: relative;
 }
+#actividad .content .cke_contents ol.bck-ol-2 li:before,
 #actividad .content .texto_curso ol.bck-ol-2 li:before,
  #actividad .popover-content ol.bck-ol-2 li:before,
   #actividad .content .workspace ul li ol.bck-ol-2 li:before {
