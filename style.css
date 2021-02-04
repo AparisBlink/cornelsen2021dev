@@ -652,10 +652,9 @@ body:not(.edit) .back .bck-flipbox-title,
 
 /*lista desordenada por defecto, sin seleccionar estilo para la ul*/
 
-#actividad .content .texto_curso ul li::before,
-#actividad .content .workspace ul li ul li::before,
 #actividad .content .texto_curso .bck-ul li::before,
 #actividad .content .workspace ul li .bck-ul li::before,
+#actividad .content .cke_contents ul li .bck-ul li::before,
 #actividad .popover-background.shown .popover-content>ul>li::before {
 	content: "";
 	height: 6px;
@@ -672,6 +671,7 @@ body:not(.edit) .back .bck-flipbox-title,
 
 /*Lista desordenada 2*/
 #actividad .content .texto_curso .bck-ul-2 li::before,
+#actividad .content .cke_contents .bck-ul-2 li::before,
  #actividad .content .workspace ul li .bck-ul-2 li::before {
     content: "\f061";
     font-family: 'FontAwesome';
@@ -725,6 +725,7 @@ body:not(.edit) .back .bck-flipbox-title,
 }
 
 /*Lista ordenada 2*/
+#actividad .content .cke_contents .bck-ol-2 li,
 #actividad .content .texto_curso .bck-ol-2 li,
  #actividad .popover-content .bck-ol-2 li,
   #actividad .content .workspace ul li .bck-ol-2 li {
