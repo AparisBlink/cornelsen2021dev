@@ -1079,7 +1079,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 }
 #actividad a, body:not(.edit) #actividad a:not(.cke_button):not(.zoom_flag_img) {
     color: #1a73e9;
-    background-color: #FFF;
+    background-color: transparent;
 }
 /*tipo test*/
 #actividad .workspace.test .checkbox-option label.filter-label,
