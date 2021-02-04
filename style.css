@@ -1278,43 +1278,43 @@ th {
 
 /*Cambios Coursetags*/
 
-.coursetag_feuer :root {
+:root .coursetag_feuer  {
     --colorppal: #B1201B;
 	--colortrans: #F8E9E8;
 }
-.coursetag_sommer :root {
+:root .coursetag_sommer {
     --colorppal: #F06E00;
 	--colortrans: #FEF1E5;
 }
-.coursetag_sonne :root {
+:root .coursetag_sonne {
     --colorppal: #FFC107;
 	--colortrans: #FFF9E6;
 }
-.coursetag_sprosse :root {
+:root .coursetag_sprosse {
     --colorppal: #82C800;
 	--colortrans: #F3FAE5;
 }
-.coursetag_blatt :root {
+:root .coursetag_blatt {
     --colorppal: #00AA64;
 	--colortrans: #E5F7F0;
 }
-.coursetag_meer :root {
+:root .coursetag_meer {
     --colorppal: #00AAAA;
 	--colortrans: #E5F7F7;
 }
-.coursetag_himmel :root {
+:root .coursetag_himmel {
     --colorppal: #0064AA;
 	--colortrans: #E5F7F7;
 }
-.coursetag_tiefsee :root {
+:root .coursetag_tiefsee {
     --colorppal: #323CA0;
 	--colortrans: #EBECF6;
 }
-.coursetag_holunder :root {
+:root .coursetag_holunder {
     --colorppal: #6414A0;
 	--colortrans: #F0E8F6;
 }
-.coursetag_flieder :root {
+:root .coursetag_flieder {
     --colorppal: #AA1EA0;
 	--colortrans: #F7E9F6;
 }
