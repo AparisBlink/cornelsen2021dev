@@ -80,6 +80,9 @@ body:not(.isTablet) #indice .units ul li.active:not(.disabled) a .title {
 #indice .btn-primary {
     color: var(--colorppal);
 }
+#indice .actividades a:hover {
+    color: var(--colorppal);
+}
 /*--*/
 
 /* MENÚ DESPLEGABLE */
