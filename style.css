@@ -550,7 +550,7 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
   }
   
   .body_clase #actividad .bck-dropdown .bck-dropdown-titulo {
-    color: rgb(255,255,255);
+    color: #1A73E9;
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: bold;
