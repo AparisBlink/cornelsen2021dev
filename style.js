@@ -25,45 +25,13 @@
 
 				{ name: 'Lista Ordenada 1', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-1' } },
 				{ name: 'Lista Ordenada 2', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-2' } },
-				{ name: 'Lista Ordenada 3', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-3' } },
-				{ name: 'Lista Ordenada 4', element: 'ol', attributes: { 'class': 'bck-ol bck-ol-4' } },
 
 				{ name: 'Lista Desordenada 1', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-1' } },
 				{ name: 'Lista Desordenada 2', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-2' } },
-				{ name: 'Lista Desordenada 3', element: 'ul', attributes: { 'class': 'bck-ul bck-ul-3' } },
 
 				{ name: 'Caja 1', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-1' } },
 				{ name: 'Caja 2', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-2' } },
-				{ name: 'Caja 3', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-3' } },
-				{ name: 'Caja 4', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-4' } },
-				{ name: 'Caja 5', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-5' } },
-				{ name: 'Caja 6', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-6' } },
-				{ name: 'Caja 7', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-7' } },
-				{ name: 'Caja 8', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-8' } },
-				{ name: 'Caja 9', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-9' } },
-				{ name: 'Caja 10', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-10' } },
-				{ name: 'Caja 11', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-11' } },
-				{ name: 'Caja 12', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-12' } },
-				{ name: 'Caja 13', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-13' } },
-
-				{ name: 'Icono Critical Thinking Naranja oscuro', element: 'span', attributes: { 'class': 'icon icon-critical' } },
-				{ name: 'Icono Critical Thinking Naranja claro', element: 'span', attributes: { 'class': 'icon icon-critical-gold' } },
-				{ name: 'Icono Critical Thinking Verde', element: 'span', attributes: { 'class': 'icon icon-critical-verde' } },
-				{ name: 'Icono Critical Thinking Negro', element: 'span', attributes: { 'class': 'icon icon-critical-negro' } },
-				{ name: 'Icono Critical Thinking Azul', element: 'span', attributes: { 'class': 'icon icon-critical-azul' } },
-				{ name: 'Icono Search Naranja oscuro', element: 'span', attributes: { 'class': 'icon icon-search' } },
-				{ name: 'Icono Search Naranja claro', element: 'span', attributes: { 'class': 'icon icon-search-naranjaclaro' } },
-				{ name: 'Icono Search Verde', element: 'span', attributes: { 'class': 'icon icon-search-verde' } },
-				{ name: 'Icono Search Negro', element: 'span', attributes: { 'class': 'icon icon-search-negro' } },
-				{ name: 'Icono Search Azul', element: 'span', attributes: { 'class': 'icon icon-search-azul' } },
-				{ name: 'Icono Video Oscuro', element: 'span', attributes: { 'class': 'icon icon-video-oscuro' } },
-				{ name: 'Icono Bocadillo Blanco', element: 'span', attributes: { 'class': 'icon icon-bocadillo-blanco' } },
-
-				{ name: 'Desplegable 1', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-1' } },
-				{ name: 'Desplegable 2', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-2' } },
-				{ name: 'Desplegable 3', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-3' } },
-				{ name: 'Desplegable 4', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-4' } },
-				{ name: 'Desplegable 5', type: 'widget', widget: 'blink_dropdown', attributes: { 'class': 'bck-dropdown bck-dropdown-5' } }
+				{ name: 'Caja 3', type: 'widget', widget: 'blink_box', attributes: { 'class': 'bck-box bck-box-3' } }
 			]
 		},
 		slidesTitle: {},
