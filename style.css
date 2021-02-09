@@ -924,6 +924,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 .slide_main input {
     color: #1a73e9;
     border-bottom: 2px solid;
+    border-radius: 0;
 }
 .fillblanks-draggable-wrapper .response {
     -moz-box-shadow: 0px 5px 4px #00000021;
