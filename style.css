@@ -981,14 +981,14 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
  .slides_averages #cont_checkSelfCorrect label:before, 
  .slides_averages #cont_checkEvaluation label:before,
   .radio-option label.filter-label:before {
-  	display: none
+  	display: none;
 	background-position-y: 150px; 
   }
   .checkbox-option input.filter-checkbox[type="checkbox"]:checked+label.filter-label:before,
    .slides_averages #cont_checkSelfCorrect label:before,
 	.slides_averages #cont_checkEvaluation label:before,
 	 .radio-option input.filter-radio[type="radio"]:checked+label.filter-label:before {
-	 	display: none
+	 	display: none;
     background-position: 0 125px;
 }
 .checkbox-option input.filter-checkbox[type="checkbox"],
