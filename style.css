@@ -178,6 +178,7 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
     padding: 0px;
     padding-bottom: 90px;
     position: relative;
+    border-top: 4px solid var(--colorppal);
 }
 /*logo*/
 
