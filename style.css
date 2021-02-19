@@ -1187,6 +1187,9 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 #actividad .workspace.memory .flip-container p {
 	font-size: 1.5rem;
 }
+#actividad .workspace.memory .front {
+    background: #fff url(images/Memory_Back_Conersel_2021) center center / 50px auto no-repeat;
+}
 
 /*botonera general*/
 #actividad .class_slide .review {
