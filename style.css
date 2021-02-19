@@ -898,7 +898,10 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 	background-color: #F8F8F8;
 }
 
-
+/*Eliminar el fondo en el vídeo*/
+.video-js {
+	background-color: transparent;
+}
 
 /*AJUSTES ACTIVIDADES*/
 /*Generales Acierto / Fallo*/
