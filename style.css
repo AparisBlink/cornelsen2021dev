@@ -901,6 +901,23 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 
 
 /*AJUSTES ACTIVIDADES*/
+/*Generales Acierto / Fallo*/
+.slide_main input[disabled].respuesta_ok,
+ .slide_main input[readonly].respuesta_ok,
+ fieldset[disabled] .slide_main input.respuesta_ok,
+.slide_main input.respuesta_ok {
+    border-color: #57e900;
+    background: #D1F3BD;
+}
+
+.slide_main input[disabled].respuesta_ko,
+ .slide_main input[readonly].respuesta_ko,
+ fieldset[disabled] .slide_main input.respuesta_ko,
+.slide_main input.respuesta_ko {
+    border-color: #FF3626;
+    background: #ffddda;
+}
+
 /*Respuesta múltiple*/
 #actividad .workspace.multiple-choice .opcion {
     border: 0;
