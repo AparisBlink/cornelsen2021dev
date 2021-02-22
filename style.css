@@ -930,6 +930,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     -moz-box-shadow: 0px 5px 4px #00000021;
     -webkit-box-shadow: 0px 5px 4px #00000021;
     box-shadow: 0px 5px 4px #00000021;
+    border-left: 3px solid #1a73e9;
 }
 #actividad .workspace.multiple-choice .opcion.respuesta_over {
     background-color: #1a74e90f;
@@ -938,8 +939,8 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     box-shadow: 0 4px 7px #1a73e95e;
 }
 #actividad .workspace.multiple-choice .opcion.respuesta_checked {
-    background-color: #FFF;
-    border-bottom: 2px solid #1A73E9;
+    background-color: #1a73e926;
+    border-color: #1A73E9;
 }
 /*Rellenar espacios*/
 .slide_main input {
@@ -1366,43 +1367,43 @@ th {
 
 /*Cambios Coursetags*/
 
-:root .coursetag_feuer  {
+.coursetag_feuer  {
     --colorppal: #B1201B;
 	--colortrans: #F8E9E8;
 }
-:root .coursetag_sommer {
+.coursetag_sommer {
     --colorppal: #F06E00;
 	--colortrans: #FEF1E5;
 }
-:root .coursetag_sonne {
+.coursetag_sonne {
     --colorppal: #FFC107;
 	--colortrans: #FFF9E6;
 }
-:root .coursetag_sprosse {
+.coursetag_sprosse {
     --colorppal: #82C800;
 	--colortrans: #F3FAE5;
 }
-:root .coursetag_blatt {
+.coursetag_blatt {
     --colorppal: #00AA64;
 	--colortrans: #E5F7F0;
 }
-:root .coursetag_meer {
+.coursetag_meer {
     --colorppal: #00AAAA;
 	--colortrans: #E5F7F7;
 }
-:root .coursetag_himmel {
+.coursetag_himmel {
     --colorppal: #0064AA;
 	--colortrans: #E5F7F7;
 }
-:root .coursetag_tiefsee {
+.coursetag_tiefsee {
     --colorppal: #323CA0;
 	--colortrans: #EBECF6;
 }
-:root .coursetag_holunder {
+.coursetag_holunder {
     --colorppal: #6414A0;
 	--colortrans: #F0E8F6;
 }
-:root .coursetag_flieder {
+.coursetag_flieder {
     --colorppal: #AA1EA0;
 	--colortrans: #F7E9F6;
 }
