@@ -621,6 +621,7 @@ body:not(.edit) .back .bck-flipbox-title,
     position: relative;
     margin-bottom: 10px;
     margin-left: 0;
+    line-height: inherit;
 }
 #actividad .content .texto_curso .bck-ul,
 #actividad .content .cke_contents .bck-ul,
@@ -897,7 +898,15 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 .video-js {
 	background-color: transparent;
 }
+/*Ajuste en imágenes*/
+.bck-i-fullscreen-wrapper {
+    padding: 0;
+}
+#actividad .content img {
+    margin-top: 0;
+}
 
+/*--*/
 /*AJUSTES ACTIVIDADES*/
 /*Generales Acierto / Fallo*/
 .slide_main input[disabled].respuesta_ok,
@@ -942,8 +951,10 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     color: #1a73e9;
     border-bottom: 2px solid;
     border-radius: 0;
+    min-height: 29px;
 }
 .fillblanks-draggable-wrapper .response {
+    min-width: 80px;
     -moz-box-shadow: 0px 5px 4px #00000021;
     -webkit-box-shadow: 0px 5px 4px #00000021;
     box-shadow: 0px 5px 4px #00000021;
@@ -952,6 +963,10 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
+}
+.fillblanks-draggable-wrapper .response p {
+    padding: 9px 10px;
+    font-size: inherit;
 }
 .slide_main input[disabled], 
 .slide_main input[readonly],
@@ -1052,9 +1067,9 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 
 /*Fill in the blanks*/
 .fillblanks-draggable-wrapper {
-	text-align: left;
+	text-align: center;
 	margin-bottom: 20px;
-	margin-left: 47px;
+	margin-left: 0;
 }
 /*Arrastrar imagen a imagen*/
 .slide_main .fillblankimages-draggable .img-input-container {
@@ -1099,7 +1114,6 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     border-color: #1A73E9;
 }
 #actividad .workspace.clasificar .clasificar_conjuntos .classify-item {
-
     background-color: #FFF;
     -moz-box-shadow: 1px 3px 4px #00000021;
     -webkit-box-shadow: 1px 3px 4px #00000021;
@@ -1210,9 +1224,9 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 
 /*botonera general*/
 #actividad .class_slide .review {
-	margin-top: 40px;
+	margin-top: 10px;
 	text-align: right;
-	margin-left: 40px;
+	margin-left: 0px;
 }
 
 .btn-danger,
@@ -1374,6 +1388,9 @@ and (min-width : 480px) {
 }
 #actividad textarea {
     font-size: 1.8rem;
+}
+#actividad .class_slide .review {
+    text-align: center;
 }
 }
 
