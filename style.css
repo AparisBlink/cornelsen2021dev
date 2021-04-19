@@ -242,11 +242,6 @@ body {
 }
 
 /*tamaño enunciado listas*/
-
-#actividad .pregunta .texto_curso {
-    font-size: 2.0rem;
-}
-
 #actividad textarea {
     font-size: 2.0rem;
 }
@@ -1362,6 +1357,23 @@ th {
     width: calc(100% + 80px);
     margin-left: -40px;
     padding: 15px 40px;
+}
+}
+
+@media only screen 
+and (min-width : 480px) {
+.texto_curso p {
+    line-height: 2.8rem !important;
+}
+#actividad .texto_curso {
+    font-size: 1.8rem;
+    line-height: 2.8rem !important;
+}
+#actividad .pregunta .texto_curso {
+    font-size: 1.8rem;
+}
+#actividad textarea {
+    font-size: 1.8rem;
 }
 }
 
