@@ -1375,7 +1375,7 @@ th {
 }
 
 @media only screen 
-and (min-width : 480px) {
+and (max-width : 480px) {
 .texto_curso p {
     line-height: 2.8rem !important;
 }
