@@ -1224,7 +1224,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 
 /*botonera general*/
 #actividad .class_slide .review {
-	margin-top: 10px;
+	margin-top: 20px;
 	text-align: right;
 	margin-left: 0px;
 }
@@ -1392,10 +1392,19 @@ and (max-width : 480px) {
 #actividad .class_slide .review {
     text-align: center;
 }
+#actividad .content .header .title h3,
+.bck-title-1 {
+    font-size: 2.5rem;    
+}
+.bck-title-2 {
+    font-size: 2.2rem;
+}
+.bck-title-3 {
+    font-size: 1.8rem;
+}
 }
 
 /*Cambios Coursetags*/
-
 .coursetag_feuer  {
     --colorppal: #B1201B;
 	--colortrans: #F8E9E8;
