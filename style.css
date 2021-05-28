@@ -1405,7 +1405,11 @@ and (max-width : 480px) {
 .puzzle-wrapper {
     width: 100%;
     margin-bottom: 35px;
+}
+#actividad .workspace.matching .opcion {
+    height: auto;
 }	
+	
 }
 
 /*Cambios Coursetags*/
