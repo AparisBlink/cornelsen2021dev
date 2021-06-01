@@ -1172,12 +1172,12 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 /*Señalar palabras*/
 #actividad .workspace.chooseblanks select {
     border-bottom: 1px solid #CCC;
-    -moz-box-shadow: 1px 3px 4px #00000021;
-    -webkit-box-shadow: 1px 3px 4px #00000021;
-    box-shadow: 1px 3px 4px #00000021;
+    -moz-box-shadow: 3px 2px 5px #00000021;
+    -webkit-box-shadow: 3px 2px 5px #00000021;
+    box-shadow: 3px 2px 5px #00000021;
     border: 1px solid #00000021;
     color: #1A73E9;
-    padding: 4px 7px;
+    padding: 3px 7px;
     margin: 3px 0px;
 }
 #actividad .workspace.chooseblanks select:hover {
