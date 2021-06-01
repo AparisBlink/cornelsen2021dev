@@ -1418,7 +1418,9 @@ and (max-width : 480px) {
 #actividad .workspace.matching .opcion {
     height: auto;
 }	
-	
+#actividad .workspace.test .respuestas li {
+    width: 70%;
+}	
 }
 
 /*Cambios Coursetags*/
