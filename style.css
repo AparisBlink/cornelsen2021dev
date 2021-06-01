@@ -912,6 +912,18 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 .texto_curso input {
      margin: 5px 0px;
 }
+.slide_main input {
+    color: #1a73e9;
+    border-bottom: 2px solid;
+    border-radius: 0;
+    height: inherit;
+    min-height: 29px;
+}
+    /*Ajuste de los inputs dentro de GRIDS para alinear las columnas*/
+    .slide_main .js--row input:last-of-type {
+        margin: 0;
+        height: inherit;
+    }
 
 /*Generales Acierto / Fallo*/
 .slide_main input[disabled].respuesta_ok,
@@ -955,12 +967,7 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
     border-color: #1A73E9;
 }
 /*Rellenar espacios*/
-.slide_main input {
-    color: #1a73e9;
-    border-bottom: 2px solid;
-    border-radius: 0;
-    min-height: 29px;
-}
+
 .fillblanks-draggable-wrapper .response {
     min-width: 80px;
     -moz-box-shadow: 0px 5px 4px #00000021;
