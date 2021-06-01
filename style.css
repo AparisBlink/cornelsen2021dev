@@ -908,6 +908,11 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 
 /*--*/
 /*AJUSTES ACTIVIDADES*/
+/*inputs respuestas*/
+.texto_curso input {
+     margin: 5px 0px;
+}
+
 /*Generales Acierto / Fallo*/
 .slide_main input[disabled].respuesta_ok,
  .slide_main input[readonly].respuesta_ok,
