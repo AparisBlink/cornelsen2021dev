@@ -189,12 +189,30 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
 }
 
 /*General */
-
 #swipeview-slider > div {
 	background-color: #eee;
 }
 #actividad .class_slide {
     padding: 40px 60px 0px;
+}
+body {
+	font-weight: normal;
+	text-align: left;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.texto_curso p {
+	line-height: 3.0rem !important;
+	margin: 1.5rem 0;
+}
+#actividad .texto_curso {
+	font-size: 2.0rem;
+	line-height: 3.0rem !important;
+}
+#actividad .pregunta .texto_curso {
+    font-size: 2.0rem;
+}
+.slide-wrapper {
+	text-align: left;
 }
 
 /*Input Blanco*/
@@ -217,66 +235,18 @@ body:not(.isTablet) #book-index #indice .unit-content .actividades .item:active,
     position: relative;
     border-top: 4px solid var(--colorppal);
 }
+
 /*logo*/
-
-.content_type_curso_cornelsen2021dev   .libro-left ul li .title:before {
-	content: "";
-	background-size: contain;
-	top: 3px;
-	background-image: url(imagenes_difusion/thespanishhub_logo.png) !important;
-	position: fixed;
-	width: 80px;
-	height: 40px;
-	background-repeat: no-repeat;
-	left: 50%;
-	margin-left: -40px;
-	opacity: 1;
-}
-
 .content_type_curso_cornelsen2021dev.content_type_clase_cornelsen2021dev   .libro-left ul li .title:before { 
 	opacity: 0;
 }
-.navbar-content .logo-publisher {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100px;
-	height: 44px;
-	background: url(imagenes_difusion/thespanishhub_logo.png) 0 0 no-repeat;
-	-webkit-background-size: contain;
-	   -moz-background-size: contain;
-		 -o-background-size: contain;
-			background-size: contain;
-	background-position: center center;
 
-}
 
 /*video*/
 .vjs-poster {
 	background-color: #fff;
 }
 
-body {
-	font-weight: normal;
-	text-align: left;
-	font-family: 'Source Sans Pro', sans-serif;
-}
-.texto_curso p {
-	line-height: 3.0rem !important;
-	margin: 1.5rem 0;
-}
-#actividad .texto_curso {
-	font-size: 2.0rem;
-	line-height: 3.0rem !important;
-}
-#actividad .pregunta .texto_curso {
-    font-size: 2.0rem;
-}
-
-.slide-wrapper {
-	text-align: left;
-}
 
 /*tamaño enunciado listas*/
 #actividad textarea {
@@ -284,13 +254,13 @@ body {
 }
 
 /*ENLACE WEB*/
-
 #actividad a,
 body:not(.edit) #actividad a:not(.cke_button):not(.zoom_flag_img) {
 	color: #1a73e9;
 	background-color: transparent;
 }
 /*--*/
+
 .cornelsen2021dev-navbar h3 {
 	width: 75%;
 	margin: auto;
@@ -512,6 +482,7 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
 .bck-box .bck-content {
     padding: inherit;
 }
+
 /*Caja 1 */
 .bck-box.bck-box-1:before {
 	display: none;
@@ -605,7 +576,6 @@ body.is_app .cornelsen2021dev-navbar.ocultar {
     position: absolute;
     right: 1.1rem;
     color:#1A73E9;
-    ;
   }
   
   .body_clase #actividad .bck-dropdown .bck-dropdown-icon>.fa {
@@ -663,8 +633,7 @@ body:not(.edit) .back .bck-flipbox-title,
 #actividad .content .texto_curso .bck-ul,
 #actividad .content .cke_contents .bck-ul,
  #actividad .content .texto_curso .bck-ol,
- #actividad .content .cke_contents .bck-ol
-  {
+ #actividad .content .cke_contents .bck-ol {
     padding: 0;
 }
 /*LISTAS DESORDENADAS*/
@@ -1074,13 +1043,15 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 	.slides_averages #cont_checkEvaluation label:before,
 	 .radio-option input.filter-radio[type="radio"]:checked+label.filter-label:before {
 	 	display: none;
-    background-position: 0 125px;
+        background-position: 0 125px;
 }
 .checkbox-option input.filter-checkbox[type="checkbox"],
  .radio-option input.filter-radio[type="radio"],
   input.inputFiltros#checkbox_selfcorrect,
    input.inputFiltros#checkbox_evaluation {
     display: inline-block;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     width: 18px;
     cursor: pointer;
@@ -1386,16 +1357,6 @@ body:not(.edit) .bck-tabs-box.vertical-tabs .div-contents {
 .info-alumno .nombre-alumno {
 	max-width: 189px;
 }
-
-/**Iconos**/
-.item-container .icon:before {
-	vertical-align: top;
-}
-
-.item-container .icon-critical:before {
-	background-image: url(imagenes_difusion/critical_thinking_dark.png);
-}
-
 
 /**TABLA**/
 table,
